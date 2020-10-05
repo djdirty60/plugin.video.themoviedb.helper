@@ -206,7 +206,7 @@ class TraktAPI(RequestAPI):
 
     def get_itemlist_sortedcached(self, *args, **kwargs):
         page = kwargs.pop('page', 1)
-        limit = kwargs.pop('limit', 10)
+        limit = kwargs.pop('limit', 50)
         cache_refresh = True if page == 1 else False
         kwparams = {
             'cache_name': self.cache_name + '.trakt.sortedlist.v4',
